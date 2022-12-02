@@ -8,6 +8,8 @@ set(
         Serial.cpp
         ReadValues.cpp
         #CompareValues.cpp
+        Gpio.cpp
+        MPU6050.cpp
 )
 
 set(
@@ -22,3 +24,5 @@ target_include_directories(
         PUBLIC
         ${estts_include_directories}
 )
+
+target_link_libraries(DDD pigpio)

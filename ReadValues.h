@@ -11,13 +11,12 @@
 #include <utility>
 #include <vector>
 #include "Serial.h"
+#include "MPU6050.h"
 
 using namespace std::chrono_literals;
 
-class ReadValues  { // : public RealTimeTask
+class ReadValues : private MPU6050 { // : public RealTimeTask
     std::shared_ptr<std::vector<ADCValues>> adcvals;
-    Serial * serial;
-    void wakey_wakey();
 public:
     explicit ReadValues(std::shared_ptr<std::vector<ADCValues>> adcvals);
     void run(); // override

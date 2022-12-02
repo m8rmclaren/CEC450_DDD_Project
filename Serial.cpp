@@ -43,6 +43,8 @@ int Serial::write_serial_uc(uint8_t reg, const uint8_t *data, uint8_t length) co
         smbus_data.block[i + 1] = data[i];
     }
 
+    memcpy(&smbus_data.block[1], data, smbus_data.block[0]);
+
     ioctl_data.read_write = I2C_SMBUS_WRITE;
     ioctl_data.command = reg;
     ioctl_data.size = I2C_SMBUS_I2C_BLOCK_DATA;
@@ -79,10 +81,32 @@ int Serial::read_serial_uc(uint8_t reg, uint8_t * data, uint8_t length) const {
         return -1;
     }
 
-    for(int i = 0; i < length; i++) {
-        // Skip the first byte, which is the length of the rest of the block.
-        data[i] = smbus_data.block[i+1];
+    // Skip the first byte, which is the length of the rest of the block.
+    memcpy(data, (uint8_t*)&smbus_data.block[1], smbus_data.block[0]);
+
+    return 0;
+}
+
+int Serial::read_serial_bits(uint8_t reg, uint8_t start_bit, uint8_t length, uint8_t *out) {
+    uint8_t b;
+
+    if (0 != read_serial_uc(reg, &b, 1)) {
+        return -1;
     }
 
+    uint8_t mask = ((1 << length) - 1) << (start_bit - length + 1);
+    b &= mask;
+    b >>= (start_bit - length + 1);
+    *out = b;
+
+    return 0;
+}
+
+int Serial::write_serial_bit(uint8_t reg, uint8_t bit_number, uint8_t data) {
+    uint8_t b;
+
+    read_serial_uc(reg, &b, 1);
+    b = (data != 0) ? (b | (1 << bit_number)) : (b & ~(1 << bit_number));
+    write_serial_uc(reg, &data, 1);
     return 0;
 }

@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/tmp/tmp.8iXoLIqlOo/Gpio.cpp" "/tmp/tmp.8iXoLIqlOo/cmake-build-debug-cec450-rpi/CMakeFiles/DDD.dir/Gpio.cpp.o"
+  "/tmp/tmp.8iXoLIqlOo/MPU6050.cpp" "/tmp/tmp.8iXoLIqlOo/cmake-build-debug-cec450-rpi/CMakeFiles/DDD.dir/MPU6050.cpp.o"
   "/tmp/tmp.8iXoLIqlOo/ReadValues.cpp" "/tmp/tmp.8iXoLIqlOo/cmake-build-debug-cec450-rpi/CMakeFiles/DDD.dir/ReadValues.cpp.o"
   "/tmp/tmp.8iXoLIqlOo/Serial.cpp" "/tmp/tmp.8iXoLIqlOo/cmake-build-debug-cec450-rpi/CMakeFiles/DDD.dir/Serial.cpp.o"
   "/tmp/tmp.8iXoLIqlOo/main.cpp" "/tmp/tmp.8iXoLIqlOo/cmake-build-debug-cec450-rpi/CMakeFiles/DDD.dir/main.cpp.o"

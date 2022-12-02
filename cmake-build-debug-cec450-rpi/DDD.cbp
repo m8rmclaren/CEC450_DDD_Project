@@ -82,6 +82,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/Gpio.cpp">
+			<Option target="DDD"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/Gpio.h">
+			<Option target="DDD"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/MPU6050.cpp">
+			<Option target="DDD"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/MPU6050.h">
+			<Option target="DDD"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.8iXoLIqlOo/ReadValues.cpp">
 			<Option target="DDD"/>
 		</Unit>

@@ -142,6 +142,60 @@ DDD/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DDD.dir/build.make CMakeFiles/DDD.dir/build
 .PHONY : DDD/fast
 
+Gpio.o: Gpio.cpp.o
+
+.PHONY : Gpio.o
+
+# target to build an object file
+Gpio.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DDD.dir/build.make CMakeFiles/DDD.dir/Gpio.cpp.o
+.PHONY : Gpio.cpp.o
+
+Gpio.i: Gpio.cpp.i
+
+.PHONY : Gpio.i
+
+# target to preprocess a source file
+Gpio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DDD.dir/build.make CMakeFiles/DDD.dir/Gpio.cpp.i
+.PHONY : Gpio.cpp.i
+
+Gpio.s: Gpio.cpp.s
+
+.PHONY : Gpio.s
+
+# target to generate assembly for a file
+Gpio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DDD.dir/build.make CMakeFiles/DDD.dir/Gpio.cpp.s
+.PHONY : Gpio.cpp.s
+
+MPU6050.o: MPU6050.cpp.o
+
+.PHONY : MPU6050.o
+
+# target to build an object file
+MPU6050.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DDD.dir/build.make CMakeFiles/DDD.dir/MPU6050.cpp.o
+.PHONY : MPU6050.cpp.o
+
+MPU6050.i: MPU6050.cpp.i
+
+.PHONY : MPU6050.i
+
+# target to preprocess a source file
+MPU6050.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DDD.dir/build.make CMakeFiles/DDD.dir/MPU6050.cpp.i
+.PHONY : MPU6050.cpp.i
+
+MPU6050.s: MPU6050.cpp.s
+
+.PHONY : MPU6050.s
+
+# target to generate assembly for a file
+MPU6050.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DDD.dir/build.make CMakeFiles/DDD.dir/MPU6050.cpp.s
+.PHONY : MPU6050.cpp.s
+
 ReadValues.o: ReadValues.cpp.o
 
 .PHONY : ReadValues.o
@@ -232,6 +286,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... DDD"
+	@echo "... Gpio.o"
+	@echo "... Gpio.i"
+	@echo "... Gpio.s"
+	@echo "... MPU6050.o"
+	@echo "... MPU6050.i"
+	@echo "... MPU6050.s"
 	@echo "... ReadValues.o"
 	@echo "... ReadValues.i"
 	@echo "... ReadValues.s"
