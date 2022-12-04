@@ -4,18 +4,15 @@
 
 #include "ReadValues.h"
 
-#include <utility>
 
-ReadValues::ReadValues(std::shared_ptr<std::vector<ADCValues>> adcvals) { // : RealTimeTask(10ms)
-    this->adcvals = std::move(adcvals);
-}
 
 void ReadValues::run() {
-    ADCValues adc;
+    IMUValues adc{};
     get_6_axis_motion(&adc);
     int16_t x,y,z;
-    get_acceleration(&x,&y,&z);
-    printf("Accel - x: %d y: %d z: %d\n", x,y,z);
-
-    //adcvals->push_back(temp);
+    //get_acceleration(&x,&y,&z);
+    mutex->lock();
+    adcvals->push_back(adc);
+    mutex->unlock();
+//    printf("Accel - x: %d y: %d z: %d\n", x,y,z);
 }

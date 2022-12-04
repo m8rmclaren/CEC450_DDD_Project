@@ -9,15 +9,20 @@
 #include <thread>
 #include <chrono>
 
-class RealTimeTask : private std::thread {
-public:
-    std::chrono::duration<double, std::milli> cycleTime;
-    explicit RealTimeTask(std::chrono::duration<double, std::milli> cycleTime) : cycleTime(cycleTime), std::thread(&RealTimeTask::start, this) {};
-    virtual void run();
-
-private:
-    [[noreturn]] void start();
-
+class RealTimeTask {
+    private:
+        std::thread thread;
+        [[noreturn]] void threadrunner();
+    public:
+        std::chrono::duration<double, std::milli> cycleTime;
+        explicit RealTimeTask(std::chrono::duration<double, std::milli> cycleTime) : cycleTime(cycleTime) {};
+        virtual void run() = 0;
+        void start() {
+            thread = std::thread(&RealTimeTask::threadrunner, this);
+        }
+        void join() {
+            thread.join();
+        }
 };
 
 #endif //DDD_REALTIMETASK_H

@@ -2,12 +2,12 @@
 // Created by Hayden Roszell on 12/1/22.
 //
 
-#include <chrono>
 #include <thread>
 #include <iostream>
 #include "CompareValues.h"
 #include "ReadValues.h"
-#include "Gpio.h"
+#include <gpiod.hpp>
+#include <mutex>
 
 using namespace std::this_thread; // sleep_for, sleep_until
 using namespace std::chrono; // nanoseconds, system_clock, seconds
@@ -15,24 +15,21 @@ using namespace std::chrono; // nanoseconds, system_clock, seconds
 int main() {
     std::cout << "Hello" << std::endl;
 
-    Gpio(1);
+    std::shared_ptr<std::vector<IMUValues>> adcvals = std::make_shared<std::vector<IMUValues>>();
+    std::shared_ptr<std::mutex> mutex = std::make_shared<std::mutex>();
+    adcvals->push_back({});
+    adcvals->push_back({});
+    adcvals->push_back({});
+    adcvals->push_back({});
+    ReadValues readTask = ReadValues(adcvals, mutex);
+    CompareValues compareTask = CompareValues(adcvals, mutex);
 
-    std::shared_ptr<std::vector<ADCValues>> adcvals;
-    ReadValues readTask = ReadValues(adcvals);
-
-    for (;;) {
-        auto start = std::chrono::high_resolution_clock::now();
-        readTask.run();
-        std::cout << duration_cast<std::chrono::microseconds>(high_resolution_clock::now() - start).count() << "us" << std::endl<< std::endl;
-        //sleep_until(system_clock::now() + seconds (1));
-    }
+    readTask.start();
+    compareTask.start();
 
 
-
-//    CompareValues compareTask = CompareValues(adcvals);
-//
-//    readTask.join();
-//    compareTask.join();
+    readTask.join();
+    compareTask.join();
 
     std::cout << "Goodbye" << std::endl;
 

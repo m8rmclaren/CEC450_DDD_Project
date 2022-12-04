@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/DDD.dir/Gpio.cpp.o"
+  "CMakeFiles/DDD.dir/CompareValues.cpp.o"
   "CMakeFiles/DDD.dir/MPU6050.cpp.o"
   "CMakeFiles/DDD.dir/ReadValues.cpp.o"
+  "CMakeFiles/DDD.dir/RealTimeTask.cpp.o"
   "CMakeFiles/DDD.dir/Serial.cpp.o"
   "CMakeFiles/DDD.dir/main.cpp.o"
   "DDD"

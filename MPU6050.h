@@ -391,7 +391,7 @@
 class MPU6050 : private Serial {
     int initialize();
 protected:
-    int get_6_axis_motion(ADCValues * adc);
+    int get_6_axis_motion(IMUValues * adc);
     int get_acceleration(int16_t* x, int16_t* y, int16_t* z);
     uint8_t get_device_id();
     bool test_imu_connection();

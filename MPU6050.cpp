@@ -12,7 +12,7 @@ using namespace std::chrono; // nanoseconds, system_clock, seconds
 
 #define NAMEOF(name) #name
 
-void print(const ADCValues& adc);
+void print(const IMUValues& adc);
 int16_t map(int16_t x, int16_t in_min, int16_t in_max, int16_t out_min, int16_t out_max);
 
 // I2C adapter 1 == rpi GPIO I2C port
@@ -29,7 +29,7 @@ MPU6050::MPU6050() : Serial(1, 0x68) {
     //calibrate_accel(6);
 }
 
-int MPU6050::get_6_axis_motion(ADCValues * adc) {
+int MPU6050::get_6_axis_motion(IMUValues * adc) {
     auto imu_buf = new uint8_t[14];
     if (0 != read_serial_uc(MPU6050_RA_ACCEL_XOUT_H, imu_buf, 14))
         return -1;
@@ -51,8 +51,6 @@ int MPU6050::get_6_axis_motion(ADCValues * adc) {
     adc->gyroX = (int16_t)(imu_buf[8] << 8 | imu_buf[9]);
     adc->gyroY = (int16_t)(imu_buf[10] << 8 | imu_buf[11]);
     adc->gyroZ = (int16_t)(imu_buf[12] << 8 | imu_buf[13]);
-
-    print(*adc);
 
     free(imu_buf);
     return 0;
@@ -206,7 +204,7 @@ int16_t map(int16_t x, int16_t in_min, int16_t in_max, int16_t out_min, int16_t 
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
-void print(const ADCValues& adc) {
+void print(const IMUValues& adc) {
     std::cout << NAMEOF(adc.accelX) << ": " << adc.accelX << std::endl;
     std::cout << NAMEOF(adc.accelY) << ": " << adc.accelY << std::endl;
     std::cout << NAMEOF(adc.accelZ) << ": " << adc.accelZ << std::endl;

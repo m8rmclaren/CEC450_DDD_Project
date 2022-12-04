@@ -142,32 +142,32 @@ DDD/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DDD.dir/build.make CMakeFiles/DDD.dir/build
 .PHONY : DDD/fast
 
-Gpio.o: Gpio.cpp.o
+CompareValues.o: CompareValues.cpp.o
 
-.PHONY : Gpio.o
+.PHONY : CompareValues.o
 
 # target to build an object file
-Gpio.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DDD.dir/build.make CMakeFiles/DDD.dir/Gpio.cpp.o
-.PHONY : Gpio.cpp.o
+CompareValues.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DDD.dir/build.make CMakeFiles/DDD.dir/CompareValues.cpp.o
+.PHONY : CompareValues.cpp.o
 
-Gpio.i: Gpio.cpp.i
+CompareValues.i: CompareValues.cpp.i
 
-.PHONY : Gpio.i
+.PHONY : CompareValues.i
 
 # target to preprocess a source file
-Gpio.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DDD.dir/build.make CMakeFiles/DDD.dir/Gpio.cpp.i
-.PHONY : Gpio.cpp.i
+CompareValues.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DDD.dir/build.make CMakeFiles/DDD.dir/CompareValues.cpp.i
+.PHONY : CompareValues.cpp.i
 
-Gpio.s: Gpio.cpp.s
+CompareValues.s: CompareValues.cpp.s
 
-.PHONY : Gpio.s
+.PHONY : CompareValues.s
 
 # target to generate assembly for a file
-Gpio.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DDD.dir/build.make CMakeFiles/DDD.dir/Gpio.cpp.s
-.PHONY : Gpio.cpp.s
+CompareValues.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DDD.dir/build.make CMakeFiles/DDD.dir/CompareValues.cpp.s
+.PHONY : CompareValues.cpp.s
 
 MPU6050.o: MPU6050.cpp.o
 
@@ -222,6 +222,33 @@ ReadValues.s: ReadValues.cpp.s
 ReadValues.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DDD.dir/build.make CMakeFiles/DDD.dir/ReadValues.cpp.s
 .PHONY : ReadValues.cpp.s
+
+RealTimeTask.o: RealTimeTask.cpp.o
+
+.PHONY : RealTimeTask.o
+
+# target to build an object file
+RealTimeTask.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DDD.dir/build.make CMakeFiles/DDD.dir/RealTimeTask.cpp.o
+.PHONY : RealTimeTask.cpp.o
+
+RealTimeTask.i: RealTimeTask.cpp.i
+
+.PHONY : RealTimeTask.i
+
+# target to preprocess a source file
+RealTimeTask.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DDD.dir/build.make CMakeFiles/DDD.dir/RealTimeTask.cpp.i
+.PHONY : RealTimeTask.cpp.i
+
+RealTimeTask.s: RealTimeTask.cpp.s
+
+.PHONY : RealTimeTask.s
+
+# target to generate assembly for a file
+RealTimeTask.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DDD.dir/build.make CMakeFiles/DDD.dir/RealTimeTask.cpp.s
+.PHONY : RealTimeTask.cpp.s
 
 Serial.o: Serial.cpp.o
 
@@ -286,15 +313,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... DDD"
-	@echo "... Gpio.o"
-	@echo "... Gpio.i"
-	@echo "... Gpio.s"
+	@echo "... CompareValues.o"
+	@echo "... CompareValues.i"
+	@echo "... CompareValues.s"
 	@echo "... MPU6050.o"
 	@echo "... MPU6050.i"
 	@echo "... MPU6050.s"
 	@echo "... ReadValues.o"
 	@echo "... ReadValues.i"
 	@echo "... ReadValues.s"
+	@echo "... RealTimeTask.o"
+	@echo "... RealTimeTask.i"
+	@echo "... RealTimeTask.s"
 	@echo "... Serial.o"
 	@echo "... Serial.i"
 	@echo "... Serial.s"

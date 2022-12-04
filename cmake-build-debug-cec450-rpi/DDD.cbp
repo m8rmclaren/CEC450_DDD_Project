@@ -5,7 +5,7 @@
 		<Option title="DDD"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\usr\;CMake Files\..\..\usr\share\;CMake Files\..\..\usr\share\eigen3\;CMake Files\..\..\usr\share\eigen3\cmake\;CMake Files\..\..\usr\lib\;CMake Files\..\..\usr\lib\arm-linux-gnueabihf\;CMake Files\..\..\usr\lib\arm-linux-gnueabihf\cmake\;CMake Files\..\..\usr\lib\arm-linux-gnueabihf\cmake\glog\;CMake Files\..\..\usr\lib\arm-linux-gnueabihf\cmake\gflags\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/tmp/tmp.8iXoLIqlOo/cmake-build-debug-cec450-rpi"/>
@@ -44,6 +44,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/include/c++/10"/>
 					<Add directory="/usr/include/arm-linux-gnueabihf/c++/10"/>
 					<Add directory="/usr/include/c++/10/backward"/>
@@ -66,6 +67,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/include/c++/10"/>
 					<Add directory="/usr/include/arm-linux-gnueabihf/c++/10"/>
 					<Add directory="/usr/include/c++/10/backward"/>
@@ -82,10 +84,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/tmp/tmp.8iXoLIqlOo/Gpio.cpp">
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/CompareValues.cpp">
 			<Option target="DDD"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.8iXoLIqlOo/Gpio.h">
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/CompareValues.h">
 			<Option target="DDD"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.8iXoLIqlOo/MPU6050.cpp">
@@ -100,6 +102,12 @@
 		<Unit filename="/tmp/tmp.8iXoLIqlOo/ReadValues.h">
 			<Option target="DDD"/>
 		</Unit>
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/RealTimeTask.cpp">
+			<Option target="DDD"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/RealTimeTask.h">
+			<Option target="DDD"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.8iXoLIqlOo/Serial.cpp">
 			<Option target="DDD"/>
 		</Unit>
@@ -111,6 +119,39 @@
 		</Unit>
 		<Unit filename="/tmp/tmp.8iXoLIqlOo/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/../../usr/share/eigen3/cmake/Eigen3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\share\eigen3\cmake\"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/../../usr/share/eigen3/cmake/Eigen3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\share\eigen3\cmake\"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/../../usr/share/eigen3/cmake/Eigen3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\share\eigen3\cmake\"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/../../usr/lib/arm-linux-gnueabihf/cmake/glog/glog-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\arm-linux-gnueabihf\cmake\glog\"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/../../usr/lib/arm-linux-gnueabihf/cmake/glog/glog-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\arm-linux-gnueabihf\cmake\glog\"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/../../usr/lib/arm-linux-gnueabihf/cmake/glog/glog-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\arm-linux-gnueabihf\cmake\glog\"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/../../usr/lib/arm-linux-gnueabihf/cmake/glog/glog-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\arm-linux-gnueabihf\cmake\glog\"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/../../usr/lib/arm-linux-gnueabihf/cmake/gflags/gflags-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\arm-linux-gnueabihf\cmake\gflags\"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/../../usr/lib/arm-linux-gnueabihf/cmake/gflags/gflags-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\arm-linux-gnueabihf\cmake\gflags\"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/../../usr/lib/arm-linux-gnueabihf/cmake/gflags/gflags-nonamespace-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\arm-linux-gnueabihf\cmake\gflags\"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8iXoLIqlOo/../../usr/lib/arm-linux-gnueabihf/cmake/gflags/gflags-nonamespace-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\arm-linux-gnueabihf\cmake\gflags\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

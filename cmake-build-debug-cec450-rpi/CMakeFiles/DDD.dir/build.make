@@ -89,9 +89,22 @@ CMakeFiles/DDD.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DDD.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.8iXoLIqlOo/main.cpp -o CMakeFiles/DDD.dir/main.cpp.s
 
+CMakeFiles/DDD.dir/RealTimeTask.cpp.o: CMakeFiles/DDD.dir/flags.make
+CMakeFiles/DDD.dir/RealTimeTask.cpp.o: ../RealTimeTask.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.8iXoLIqlOo/cmake-build-debug-cec450-rpi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DDD.dir/RealTimeTask.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DDD.dir/RealTimeTask.cpp.o -c /tmp/tmp.8iXoLIqlOo/RealTimeTask.cpp
+
+CMakeFiles/DDD.dir/RealTimeTask.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DDD.dir/RealTimeTask.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.8iXoLIqlOo/RealTimeTask.cpp > CMakeFiles/DDD.dir/RealTimeTask.cpp.i
+
+CMakeFiles/DDD.dir/RealTimeTask.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DDD.dir/RealTimeTask.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.8iXoLIqlOo/RealTimeTask.cpp -o CMakeFiles/DDD.dir/RealTimeTask.cpp.s
+
 CMakeFiles/DDD.dir/Serial.cpp.o: CMakeFiles/DDD.dir/flags.make
 CMakeFiles/DDD.dir/Serial.cpp.o: ../Serial.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.8iXoLIqlOo/cmake-build-debug-cec450-rpi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DDD.dir/Serial.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.8iXoLIqlOo/cmake-build-debug-cec450-rpi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DDD.dir/Serial.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DDD.dir/Serial.cpp.o -c /tmp/tmp.8iXoLIqlOo/Serial.cpp
 
 CMakeFiles/DDD.dir/Serial.cpp.i: cmake_force
@@ -104,7 +117,7 @@ CMakeFiles/DDD.dir/Serial.cpp.s: cmake_force
 
 CMakeFiles/DDD.dir/ReadValues.cpp.o: CMakeFiles/DDD.dir/flags.make
 CMakeFiles/DDD.dir/ReadValues.cpp.o: ../ReadValues.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.8iXoLIqlOo/cmake-build-debug-cec450-rpi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DDD.dir/ReadValues.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.8iXoLIqlOo/cmake-build-debug-cec450-rpi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DDD.dir/ReadValues.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DDD.dir/ReadValues.cpp.o -c /tmp/tmp.8iXoLIqlOo/ReadValues.cpp
 
 CMakeFiles/DDD.dir/ReadValues.cpp.i: cmake_force
@@ -115,22 +128,22 @@ CMakeFiles/DDD.dir/ReadValues.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DDD.dir/ReadValues.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.8iXoLIqlOo/ReadValues.cpp -o CMakeFiles/DDD.dir/ReadValues.cpp.s
 
-CMakeFiles/DDD.dir/Gpio.cpp.o: CMakeFiles/DDD.dir/flags.make
-CMakeFiles/DDD.dir/Gpio.cpp.o: ../Gpio.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.8iXoLIqlOo/cmake-build-debug-cec450-rpi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DDD.dir/Gpio.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DDD.dir/Gpio.cpp.o -c /tmp/tmp.8iXoLIqlOo/Gpio.cpp
+CMakeFiles/DDD.dir/CompareValues.cpp.o: CMakeFiles/DDD.dir/flags.make
+CMakeFiles/DDD.dir/CompareValues.cpp.o: ../CompareValues.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.8iXoLIqlOo/cmake-build-debug-cec450-rpi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DDD.dir/CompareValues.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DDD.dir/CompareValues.cpp.o -c /tmp/tmp.8iXoLIqlOo/CompareValues.cpp
 
-CMakeFiles/DDD.dir/Gpio.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DDD.dir/Gpio.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.8iXoLIqlOo/Gpio.cpp > CMakeFiles/DDD.dir/Gpio.cpp.i
+CMakeFiles/DDD.dir/CompareValues.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DDD.dir/CompareValues.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.8iXoLIqlOo/CompareValues.cpp > CMakeFiles/DDD.dir/CompareValues.cpp.i
 
-CMakeFiles/DDD.dir/Gpio.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DDD.dir/Gpio.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.8iXoLIqlOo/Gpio.cpp -o CMakeFiles/DDD.dir/Gpio.cpp.s
+CMakeFiles/DDD.dir/CompareValues.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DDD.dir/CompareValues.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.8iXoLIqlOo/CompareValues.cpp -o CMakeFiles/DDD.dir/CompareValues.cpp.s
 
 CMakeFiles/DDD.dir/MPU6050.cpp.o: CMakeFiles/DDD.dir/flags.make
 CMakeFiles/DDD.dir/MPU6050.cpp.o: ../MPU6050.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.8iXoLIqlOo/cmake-build-debug-cec450-rpi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DDD.dir/MPU6050.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.8iXoLIqlOo/cmake-build-debug-cec450-rpi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DDD.dir/MPU6050.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DDD.dir/MPU6050.cpp.o -c /tmp/tmp.8iXoLIqlOo/MPU6050.cpp
 
 CMakeFiles/DDD.dir/MPU6050.cpp.i: cmake_force
@@ -144,22 +157,24 @@ CMakeFiles/DDD.dir/MPU6050.cpp.s: cmake_force
 # Object files for target DDD
 DDD_OBJECTS = \
 "CMakeFiles/DDD.dir/main.cpp.o" \
+"CMakeFiles/DDD.dir/RealTimeTask.cpp.o" \
 "CMakeFiles/DDD.dir/Serial.cpp.o" \
 "CMakeFiles/DDD.dir/ReadValues.cpp.o" \
-"CMakeFiles/DDD.dir/Gpio.cpp.o" \
+"CMakeFiles/DDD.dir/CompareValues.cpp.o" \
 "CMakeFiles/DDD.dir/MPU6050.cpp.o"
 
 # External object files for target DDD
 DDD_EXTERNAL_OBJECTS =
 
 DDD: CMakeFiles/DDD.dir/main.cpp.o
+DDD: CMakeFiles/DDD.dir/RealTimeTask.cpp.o
 DDD: CMakeFiles/DDD.dir/Serial.cpp.o
 DDD: CMakeFiles/DDD.dir/ReadValues.cpp.o
-DDD: CMakeFiles/DDD.dir/Gpio.cpp.o
+DDD: CMakeFiles/DDD.dir/CompareValues.cpp.o
 DDD: CMakeFiles/DDD.dir/MPU6050.cpp.o
 DDD: CMakeFiles/DDD.dir/build.make
 DDD: CMakeFiles/DDD.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/tmp.8iXoLIqlOo/cmake-build-debug-cec450-rpi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable DDD"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/tmp.8iXoLIqlOo/cmake-build-debug-cec450-rpi/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable DDD"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DDD.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

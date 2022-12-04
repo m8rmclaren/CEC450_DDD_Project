@@ -6,7 +6,7 @@
 
 #include <chrono>
 
-[[noreturn]] void RealTimeTask::start() {
+[[noreturn]] void RealTimeTask::threadrunner() {
     while (true) {
         auto start = std::chrono::high_resolution_clock::now();
         run();

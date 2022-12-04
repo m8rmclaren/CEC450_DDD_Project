@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/DDD.dir/main.cpp.o CMakeFiles/DDD.dir/Serial.cpp.o CMakeFiles/DDD.dir/ReadValues.cpp.o CMakeFiles/DDD.dir/Gpio.cpp.o CMakeFiles/DDD.dir/MPU6050.cpp.o -o DDD  -lpigpio 
+/usr/bin/c++ -g CMakeFiles/DDD.dir/main.cpp.o CMakeFiles/DDD.dir/RealTimeTask.cpp.o CMakeFiles/DDD.dir/Serial.cpp.o CMakeFiles/DDD.dir/ReadValues.cpp.o CMakeFiles/DDD.dir/CompareValues.cpp.o CMakeFiles/DDD.dir/MPU6050.cpp.o -o DDD  -lpigpio -lpthread -lgpiodcxx 

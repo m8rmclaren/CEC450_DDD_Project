@@ -226,11 +226,20 @@ DDD_BINARY_DIR:STATIC=/tmp/tmp.8iXoLIqlOo/cmake-build-debug-cec450-rpi
 //Value Computed by CMake
 DDD_SOURCE_DIR:STATIC=/tmp/tmp.8iXoLIqlOo
 
+//The directory containing a CMake configuration file for Eigen3.
+Eigen3_DIR:PATH=/usr/share/eigen3/cmake
+
+//The directory containing a CMake configuration file for Glog.
+Glog_DIR:PATH=/usr/lib/arm-linux-gnueabihf/cmake/glog
+
 //Path to a program.
 ProcessorCount_cmd_nproc:FILEPATH=/usr/bin/nproc
 
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
+
+//The directory containing a CMake configuration file for gflags.
+gflags_DIR:PATH=/usr/lib/arm-linux-gnueabihf/cmake/gflags
 
 
 ########################
