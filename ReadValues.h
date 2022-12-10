@@ -20,7 +20,9 @@ class ReadValues : private MPU6050, public RealTimeTask {
     std::shared_ptr<std::vector<IMUValues>> adcvals;
     std::shared_ptr<std::mutex> mutex;
 public:
-    explicit ReadValues(std::shared_ptr<std::vector<IMUValues>> adcvals, std::shared_ptr<std::mutex> mutex) : RealTimeTask(10ms), adcvals(std::move(adcvals)), mutex(std::move(mutex)) {};
+    explicit ReadValues(std::shared_ptr<std::vector<IMUValues>> adcvals, std::shared_ptr<std::mutex> mutex) : RealTimeTask(10ms), adcvals(std::move(adcvals)), mutex(std::move(mutex)) {
+        set_parent_thread_name("Read Values");
+    };
     void run() override;
 };
 

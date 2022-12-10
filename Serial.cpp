@@ -68,16 +68,17 @@ int Serial::read_serial_uc(uint8_t reg, uint8_t * data, uint8_t length) const {
     }
 
     // Byte 0 of smbus block is the length of transmission
-    smbus_data.block[0] = length;
+    // There is a way to use the i2c_smbus API instead of issuing ioctl system call, but I couldn't get it to work
 
+
+    smbus_data.block[0] = length;
     ioctl_data.read_write = I2C_SMBUS_READ;
     ioctl_data.command = reg;
     ioctl_data.size = I2C_SMBUS_I2C_BLOCK_DATA;
     ioctl_data.data = &smbus_data;
-
-    // There is a way to use the i2c_smbus API instead of issuing ioctl system call, but I couldn't get it to work
     if (ioctl(serial_port, I2C_SMBUS, &ioctl_data) < 0) {
-        std::cerr << "Failed to access I2C read. Message: " << strerror(errno) << " [Errno " << errno << "]" << std::endl;
+        std::cerr << "Failed to access I2C read. Message: "
+            << strerror(errno) << " [Errno " << errno << "]" << std::endl;
         return -1;
     }
 

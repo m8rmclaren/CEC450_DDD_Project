@@ -50,9 +50,9 @@ void CompareValues::run() {
 //    cout << "gyroZ: " << average.gyroZ - last.gyroZ << endl;
 //    cout << "temp: " << average.temp - last.temp << endl;
     // log in change from last in csv form
-    cout << average.accelX - last.accelX << "," << average.accelY - last.accelY << "," << average.accelZ - last.accelZ << ","
-         << average.gyroX - last.gyroX << "," << average.gyroY - last.gyroY << "," << average.gyroZ - last.gyroZ << ","
-         << average.temp - last.temp << endl;
+//    cout << average.accelX - last.accelX << "," << average.accelY - last.accelY << "," << average.accelZ - last.accelZ << ","
+//         << average.gyroX - last.gyroX << "," << average.gyroY - last.gyroY << "," << average.gyroZ - last.gyroZ << ","
+//         << average.temp - last.temp << endl;
 
     if (abs(average.accelX - last.accelX) > RED ||
         abs(average.accelY - last.accelY) > RED) {

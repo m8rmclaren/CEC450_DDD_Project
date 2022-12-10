@@ -25,8 +25,9 @@ MPU6050::MPU6050() : Serial(1, 0x68) {
     if (!test_imu_connection())
         throw std::runtime_error("IMU didn't send back expected ID");
 
-    //calibrate_gyro(6);
-    //calibrate_accel(6);
+//    calibrate_gyro(6);
+//    calibrate_accel(6);
+//    get_acceleration(nullptr, nullptr, nullptr);
 }
 
 int MPU6050::get_6_axis_motion(IMUValues * adc) {

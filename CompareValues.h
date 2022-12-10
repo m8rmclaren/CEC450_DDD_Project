@@ -19,7 +19,6 @@ class CompareValues : public RealTimeTask {
     std::shared_ptr<std::mutex> mutex;
     IMUValues last = {0, 0, 0, 0, 0, 0, 0};
 
-
     int16_t YELLOW = 15000;
     int16_t RED = 26000;
 
@@ -34,6 +33,7 @@ public:
             red_pin.request({"LED", gpiod::line_request::DIRECTION_OUTPUT});
             yellow_pin.request({"LED", gpiod::line_request::DIRECTION_OUTPUT});
             green_pin.request({"LED", gpiod::line_request::DIRECTION_OUTPUT});
+            set_parent_thread_name("Compare Values");
         }
         void run() override;
 };

@@ -8,11 +8,13 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
+#include <utility>
 
 class RealTimeTask {
     private:
         std::thread thread;
         [[noreturn]] void threadrunner();
+        std::string parent_thread_name;
     public:
         std::chrono::duration<double, std::milli> cycleTime;
         explicit RealTimeTask(std::chrono::duration<double, std::milli> cycleTime) : cycleTime(cycleTime) {};
@@ -22,6 +24,10 @@ class RealTimeTask {
         }
         void join() {
             thread.join();
+        }
+
+        void set_parent_thread_name(std::string name) {
+            parent_thread_name = std::move(name);
         }
 };
 
